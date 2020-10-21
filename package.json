@@ -1,0 +1,46 @@
+{
+  "name": "exel",
+  "version": "1.0.0",
+  "description": "Java script app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " cross-env NODE_ENV=development webpack serve ",
+    "build": "cross-env NODE_ENV=production webpack --mode production "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgeny19989/exel.git"
+  },
+  "author": "Evgeny Tolmachev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgeny19989/exel/issues"
+  },
+  "homepage": "https://github.com/Evgeny19989/exel#readme",
+  "private": true,
+  "browserslist": "> 0.25%, not dead",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-loader": "^4.0.2",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.1.1",
+    "node-sass": "^4.14.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}
