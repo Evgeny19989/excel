@@ -1,8 +1,8 @@
 class Dom {
     constructor(selector) {
-        this.$el = typeof selector === 'string'
-            ? document.querySelector(selector)
-            : selector
+        this.$el = typeof selector === 'string' ?
+            document.querySelector(selector) :
+            selector
     }
 
     html(html) {
@@ -13,6 +13,10 @@ class Dom {
         return this.$el.outerHTML.trim()
     }
 
+    on(eventType, callback) {
+        this.$el.addEventListener(eventType, callback)
+    }
+
     clear() {
         this.html('')
         return this
@@ -20,17 +24,15 @@ class Dom {
 
     append(node) {
         if (node instanceof Dom) {
-           node = node.$el
+            node = node.$el
         }
         if (Element.prototype.append) {
             this.$el.append(node)
         } else {
             this.$el.appendChild(node)
         }
-    return this
+        return this
     }
-
-
 }
 
 export function $(selector) {

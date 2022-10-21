@@ -7,6 +7,6 @@ import {Header} from "@/components/Header/Header";
 import {Formula} from "@/components/Formula/Formula";
 
 const exel = new Exel('#app', {
-components:[Header,Toolbar,Formula,Table]
+components: [Header, Toolbar, Formula, Table]
 })
 exel.render()

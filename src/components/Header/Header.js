@@ -1,10 +1,10 @@
-
 import {ExelComponent} from "@core/ExelComponent";
 
-export class Header extends ExelComponent{
+export class Header extends ExelComponent {
     static className = 'excel__header'
-toHTML() {
-    return `
+
+    toHTML() {
+        return `
           <input class="input" type="text" value="Новая таблица"/>
 
             <div>
@@ -16,5 +16,5 @@ toHTML() {
                 </div>
             </div>
     `
-}
+    }
 }
