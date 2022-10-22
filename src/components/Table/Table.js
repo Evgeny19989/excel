@@ -1,10 +1,12 @@
-
 import {ExelComponent} from "@core/ExelComponent";
+import {createTable} from "@/components/Table/table.template";
 
-export class Table extends ExelComponent{
+export class Table extends ExelComponent {
     static className = 'excel__table'
+
     toHTML() {
-        return`
+        return createTable()
+  /*      `
         <div class="row">
 
                 <div class="row-info">
@@ -40,6 +42,6 @@ export class Table extends ExelComponent{
                     <div contenteditable class="cell">dfgdgdfd</div>
                 </div>
             </div>
-        `
+        `*/
     }
 }

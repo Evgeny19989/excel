@@ -17,12 +17,16 @@ export class DomListener {
                 // eslint-disable-next-line max-len
                 throw new Error(`Method ${method} is not implemented in ${name} Component`)
             }
-            this.$root.on(listener, this[method].bind(this))
+            this[method] = this[method].bind(this)
+            this.$root.on(listener, this[method])
         })
     }
 
     removeDomListeners() {
-
+        this.listeners.forEach(listener => {
+            const method = getMethodName(listener)
+            this.$root.removeListener(listener, this[method].bind(this))
+        })
     }
 }
 
